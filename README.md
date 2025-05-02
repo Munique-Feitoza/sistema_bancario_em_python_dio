@@ -1,32 +1,40 @@
-# 🏦 Sistema Bancário em Python
+# 💰 Sistema Bancário em Python (Refatorado com Datas)
 
-Este é um projeto desenvolvido durante o bootcamp da [DIO.me](https://www.dio.me/) — **"Criando um Sistema Bancário com Python"**. O desafio tem como objetivo aplicar conceitos fundamentais de programação em Python desenvolvendo um sistema bancário simples e funcional.
+Este é um projeto desenvolvido durante o bootcamp da [DIO.me](https://www.dio.me/), baseado no desafio de construir um sistema bancário em Python. Nesta versão refatorada, o sistema utiliza **funções** e inclui **registro de datas** para todas as transações e cadastros de usuários, tornando o controle mais realista e organizado.
 
-> 🔗 [Link para o projeto original da DIO](https://github.com/digitalinnovationone/trilha-python-dio/blob/main/00%20-%20Fundamentos/desafio.py)
+## ✅ Funcionalidades
 
-## 📌 Funcionalidades
+- 📌 Criar usuários com CPF, nome, data de nascimento e endereço (com data de cadastro).
+- 🏦 Criar contas bancárias associadas a usuários.
+- 💵 Realizar **depósitos** (com registro de data e hora).
+- 💸 Realizar **saques**, respeitando:
+  - Limite de R$500 por saque
+  - Máximo de 3 saques por dia
+  - Saldo da conta
+- 📄 Consultar extrato da conta, com data e hora das movimentações.
+- 📚 Listar todas as contas cadastradas.
 
-- ✅ Criar usuários com CPF único
-- ✅ Criar contas bancárias vinculadas a usuários
-- ✅ Realizar depósitos e saques
-- ✅ Visualizar extrato com histórico de transações
-- ✅ Limite diário de saques (3 saques de até R$ 500)
-- ✅ Menu interativo com opções numeradas
-- ✅ Suporte a múltiplas contas e usuários
+## 📁 Estrutura
 
-## 📂 Estrutura do Código
+O código está organizado em funções para facilitar manutenção e reutilização:
 
-- O código é modularizado com funções para cada operação
-- Armazenamento de dados em memória com listas e dicionários
-- Validações de entrada e regras bancárias (como limites)
+- `criar_usuario()`
+- `criar_conta()`
+- `depositar(conta)`
+- `sacar(conta)`
+- `exibir_extrato(conta)`
+- `listar_contas()`
 
-## ▶️ Como executar
+Além disso, utiliza `datetime.now()` para registrar as datas relevantes de ações no sistema.
 
-1. Clone este repositório ou copie o código:
+## 📦 Como Executar
+
+1. Certifique-se de ter Python instalado (versão 3.x).
+2. . Clone este repositório ou copie o código:
    ```bash
    git clone https://github.com/seu-usuario/sistema-bancario-python.git
    ```
-2. Execute com Python 3:
+3. Execute com Python 3:
    ```bash
    python sistema_bancario.py
    ```
