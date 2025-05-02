@@ -1,64 +1,37 @@
-# 💰 Sistema Bancário em Python (Refatorado com Datas)
+# Sistema Bancário em Python
 
-Este é um projeto desenvolvido durante o bootcamp da [DIO.me](https://www.dio.me/), baseado no desafio de construir um sistema bancário em Python. Nesta versão refatorada, o sistema utiliza **funções** e inclui **registro de datas** para todas as transações e cadastros de usuários, tornando o controle mais realista e organizado.
+Este projeto é um sistema bancário simples desenvolvido em Python, utilizando orientação a objetos. Ele permite o gerenciamento de clientes e contas bancárias com operações de depósito, saque e extrato.
 
-## ✅ Funcionalidades
+## Funcionalidades
 
-- 📌 Criar usuários com CPF, nome, data de nascimento e endereço (com data de cadastro).
-- 🏦 Criar contas bancárias associadas a usuários.
-- 💵 Realizar **depósitos** (com registro de data e hora).
-- 💸 Realizar **saques**, respeitando:
-  - Limite de R$500 por saque
-  - Máximo de 3 saques por dia
-  - Saldo da conta
-- 📄 Consultar extrato da conta, com data e hora das movimentações.
-- 📚 Listar todas as contas cadastradas.
+- ✅ Criação de clientes com CPF único.
+- ✅ Abertura de contas bancárias associadas a clientes.
+- ✅ Depósito de valores com registro em extrato.
+- ✅ Saque com verificação de saldo, limite por saque e limite de saques diários.
+- ✅ Visualização do extrato da conta.
+- ✅ Listagem de contas cadastradas.
 
-## 📁 Estrutura
+## Requisitos
 
-O código está organizado em funções para facilitar manutenção e reutilização:
+- Python 3.8+
 
-- `criar_usuario()`
-- `criar_conta()`
-- `depositar(conta)`
-- `sacar(conta)`
-- `exibir_extrato(conta)`
-- `listar_contas()`
+## Como executar
 
-Além disso, utiliza `datetime.now()` para registrar as datas relevantes de ações no sistema.
+1. Clone o repositório ou baixe os arquivos `banco.py` e `main.py`.
+2. Execute no terminal com:
 
-## 📦 Como Executar
+```bash
+python main.py
+```
 
-1. Certifique-se de ter Python instalado (versão 3.x).
-2. . Clone este repositório ou copie o código:
-   ```bash
-   git clone https://github.com/seu-usuario/sistema-bancario-python.git
-   ```
-3. Execute com Python 3:
-   ```bash
-   python sistema_bancario.py
-   ```
+## Estrutura de Arquivos
 
-## 📚 Tecnologias utilizadas
+- `banco.py` – Contém as classes `Cliente` e `ContaBancaria` com toda a lógica de negócios.
+- `main.py` – Interface interativa em terminal para o usuário interagir com o sistema.
+- `README.md` – Este arquivo.
 
-- Python 3
-- Programação Procedural
-- Listas e Dicionários
-- Entrada e saída de dados com `input()` e `print()`
+## Melhorias Recentes
 
-## 🧠 Aprendizados
-
-- Estruturação de código limpo e modular
-- Validação de regras de negócio
-- Manipulação de dados em memória
-- Interação com o usuário via terminal
-
-## 🏁 Próximos passos
-
-- Suporte a autenticação por senha
-- Persistência de dados em arquivo ou banco de dados
-- Interface gráfica com Tkinter ou interface web com Flask
-
----
-
-Feito com 💻 para o bootcamp da [DIO.me](https://www.dio.me/)
+- Refatoração completa usando classes (orientação a objetos).
+- Separação clara entre lógica de negócio (`banco.py`) e interface (`main.py`).
+- Validação de dados e mensagens mais descritivas.
